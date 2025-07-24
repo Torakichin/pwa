@@ -1,42 +1,15 @@
-function omikuji() {
-  let msg1;
-  let msg2;
-  let random1;
-  let random2;
+document.addEventListener('DOMContentLoaded', function() {
+    function calculateSum() {
+        const value1 = parseFloat(document.getElementById('input-value1').value);
+        const value2 = parseFloat(document.getElementById('input-value2').value);
 
-  random1 = Math.floor(Math.random() * 2);
-  console.log(random1);
+        if (!isNaN(value1) && !isNaN(value2)) {
+            const sum = value1 + value2;
+            document.getElementById('result').textContent = '結果: ' + sum;
+        } else {
+            alert('有効な数値を入力してください。');
+        }
+    }
 
-  const result = ['大吉', '大凶'];
-
-  msg1 = result[random1];
-
-  random2 = Math.floor(Math.random() * 3);
-  console.log(random2);
-
-  const resultMsg = [
-      'これはサンプルどすえ',
-      'これはサンプル。',
-      'ポテチを食べましょう。',
-  ];
-
-  msg2 = resultMsg[random2];
-
-  document.getElementById('msgHeading').setAttribute('style', 'opacity: 1;');
-  setTimeout(function() {
-      document.getElementById('msg1').innerHTML = msg1;
-  }, 1000);
-  setTimeout(function() {
-      document.getElementById('msg2').innerHTML = msg2;
-  }, 2000);
-  document.getElementById('playBtn').setAttribute('disabled', 'disabled');
-  document.getElementById('resetBtn').removeAttribute('disabled');
-}
-
-function reset() {
-  document.getElementById('msgHeading').setAttribute('style', 'opacity: 0;');
-  document.getElementById('msg1').innerHTML = '';
-  document.getElementById('msg2').innerHTML = '';
-  document.getElementById('playBtn').removeAttribute('disabled');
-  document.getElementById('resetBtn').setAttribute('disabled', 'disabled');
-}
+    document.getElementById('calculate-button').addEventListener('click', calculateSum);
+});
