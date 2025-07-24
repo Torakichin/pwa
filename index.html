@@ -1,24 +1,29 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>数値の和を計算</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="img_hx.jpg">
-    <title>PWA Sample</title>
     <script src="app.js"></script>
 </head>
 <body>
-    <input type="button" value="おみくじを引く！" onclick="omikuji();" id="playBtn">
-    <div>
-        <div id="msgHeading" style="opacity: 0;">おみくじの結果は........</div>
-        <div id="msg1"></div>
-        <div id="msg2"></div>
+    <h1>数値の和を計算するアプリ</h1>
+    <div id="input-section">
+        <label for="input-value1">数値1を入力:</label>
+        <input type="number" id="input-value1" required>
+        <br>
+        <label for="input-value2">数値2を入力:</label>
+        <input type="number" id="input-value2" required>
     </div>
-    <input type="button" value="リセット！" id="resetBtn" onclick="reset();" disabled="disabled">
+    <button id="calculate-button">計算する</button>
+    <div id="output-section">
+        <h2>結果:</h2>
+        <p id="result"></p>
+    </div>
     <script>
         if ('serviceWorker' in navigator) {
-            window.addEventListener("load", function() {
+            window.addEventListener('load', function() {
                 navigator.serviceWorker.register('sw.js');
             });
         }
