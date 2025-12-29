@@ -5,13 +5,12 @@ const ASSETS_TO_CACHE = [
   './manifest.json',
   './pict_stop.png',
   './pict_play.png',
-  './bgm1.mp3',
-  './bgm2.mp3',
-  './bgm3.mp3',
-  './bgm4.mp3',
-  './bgm5.mp3',
-  './bgm6.mp3',
-  './bgm7.mp3'
+  './IRIS OUT.mp3',
+  './カリスマックス.mp3',
+  './シルエット.mp3',
+  './ライラック.mp3',
+  './唱.mp3',
+  './夜に駆ける.mp3'
 ];
 
 // インストール時にファイルをキャッシュ
