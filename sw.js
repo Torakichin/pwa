@@ -5,12 +5,12 @@ const ASSETS_TO_CACHE = [
   './manifest.json',
   './pict_stop.png',
   './pict_play.png',
-  './IRIS OUT.mp3',
-  './カリスマックス.mp3',
-  './シルエット.mp3',
-  './ライラック.mp3',
-  './唱.mp3',
-  './夜に駆ける.mp3'
+  './廻廻奇譚.mp3',
+  './LOST IN PARADISE.mp3',
+  './青のすみか.mp3',
+  './SPECIALZ.mp3',
+  './AIZO.mp3',
+  './好きすぎて滅！.mp3'
 ];
 
 // インストール時にファイルをキャッシュ
